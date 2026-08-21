@@ -6,6 +6,7 @@ const { usuario } = useAuth()
 
 <template>
   <v-container>
-    <h1 class="text-h5">Bem-vindo(a){{ usuario ? `, ${usuario.nomeCompleto}` : '' }}</h1>
+    <h1 class="text-h5 mb-4">Bem-vindo(a){{ usuario ? `, ${usuario.nomeCompleto}` : '' }}</h1>
+    <v-btn color="primary" :to="{ name: 'familias' }">Gerenciar Famílias</v-btn>
   </v-container>
 </template>

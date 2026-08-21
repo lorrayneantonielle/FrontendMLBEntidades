@@ -16,7 +16,12 @@ const router = createRouter({
       path: '/admin',
       component: () => import('@/layouts/AdminLayout.vue'),
       meta: { requiresAuth: true },
-      children: [{ path: '', name: 'admin-home', component: () => import('@/pages/admin/AdminHomePage.vue') }],
+      children: [
+        { path: '', name: 'admin-home', component: () => import('@/pages/admin/AdminHomePage.vue') },
+        { path: 'familias', name: 'familias', component: () => import('@/pages/admin/familias/FamiliasListPage.vue') },
+        { path: 'familias/nova', name: 'familia-nova', component: () => import('@/pages/admin/familias/FamiliaFormPage.vue') },
+        { path: 'familias/:id', name: 'familia-editar', component: () => import('@/pages/admin/familias/FamiliaFormPage.vue') },
+      ],
     },
   ],
 })
