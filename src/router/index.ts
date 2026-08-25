@@ -8,7 +8,7 @@ const router = createRouter({
       path: '/',
       component: () => import('@/layouts/PublicLayout.vue'),
       children: [
-        { path: '', name: 'public-home', component: () => import('@/pages/public/PublicHomePage.vue') },
+        { path: '', name: 'public-home', component: () => import('@/pages/public/LandingPage.vue') },
         { path: 'login', name: 'login', component: () => import('@/pages/admin/LoginPage.vue') },
       ],
     },
@@ -24,6 +24,14 @@ const router = createRouter({
         { path: 'obra/etapas', name: 'obra-etapas', component: () => import('@/pages/admin/obra/EtapasPage.vue') },
         { path: 'obra/medicoes', name: 'obra-medicoes', component: () => import('@/pages/admin/obra/MedicoesPage.vue') },
         { path: 'obra/ocorrencias', name: 'obra-ocorrencias', component: () => import('@/pages/admin/obra/OcorrenciasPage.vue') },
+        { path: 'unidades', name: 'unidades-mapa', component: () => import('@/pages/admin/unidades/MapaOcupacaoPage.vue') },
+        { path: 'unidades/nova', name: 'unidades-nova', component: () => import('@/pages/admin/unidades/UnidadeFormPage.vue') },
+        { path: 'mutirao/escalas', name: 'mutirao-escalas', component: () => import('@/pages/admin/mutirao/EscalasPage.vue') },
+        {
+          path: 'mutirao/presencas',
+          name: 'mutirao-presencas',
+          component: () => import('@/pages/admin/mutirao/PresencaPontuacaoPage.vue'),
+        },
       ],
     },
   ],
