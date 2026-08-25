@@ -2,10 +2,6 @@
 
 <template>
   <v-app>
-    <v-app-bar color="primary">
-      <v-app-bar-title>MLBEntidades</v-app-bar-title>
-    </v-app-bar>
-
     <v-main>
       <router-view />
     </v-main>
